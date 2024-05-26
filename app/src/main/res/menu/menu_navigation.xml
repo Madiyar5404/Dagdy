@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/navigation_qarjy"
+        android:enabled="true"
+        android:icon="@drawable/ic_adet"
+        android:title="@string/adet"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/navigation_adet"
+        android:enabled="true"
+        android:icon="@drawable/ic_qarjy"
+        android:title="@string/qarjy"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/navigation_plus"
+        android:checkable="false"
+        android:checked="false"
+        android:title="" />
+
+    <item
+        android:id="@+id/navigation_jazba"
+        android:enabled="true"
+        android:icon="@drawable/ic_jazba"
+        android:title="@string/jazba"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/navigation_baptau"
+        android:enabled="true"
+        android:icon="@drawable/ic_baptau"
+        android:title="@string/baptau"
+        app:showAsAction="always" />
+
+</menu>

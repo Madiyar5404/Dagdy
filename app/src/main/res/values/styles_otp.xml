@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="OtpStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/black</item>
+
+        <item name="bar_enabled">true</item>
+        <item name="bar_active_color">@color/black20</item>
+        <item name="bar_inactive_color">@color/black20</item>
+        <item name="bar_height">@dimen/dp_1</item>
+        <item name="bar_margin_top">@dimen/dp_10</item>
+
+        <item name="box_margin">@dimen/dp_10</item>
+
+        <item name="length">4</item>
+        <item name="otp_text_size">@dimen/sp_34</item>
+    </style>
+
+</resources>

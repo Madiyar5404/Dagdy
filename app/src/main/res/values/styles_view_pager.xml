@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="PageIndicatorViewStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="piv_animationType">scale</item>
+        <item name="piv_dynamicCount">true</item>
+        <item name="piv_interactiveAnimation">true</item>
+        <item name="piv_padding">@dimen/dp_8</item>
+        <item name="piv_radius">@dimen/dp_6</item>
+        <item name="piv_scaleFactor">0.1</item>
+        <item name="piv_selectedColor">@color/white</item>
+        <item name="piv_unselectedColor">@color/black</item>
+    </style>
+
+</resources>

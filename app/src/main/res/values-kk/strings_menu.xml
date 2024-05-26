@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="menu_about">Қосымша туралы</string>
+    <string name="menu_language">Тіл</string>
+    <string name="navigation_drawer_open">Ашық</string>
+    <string name="navigation_drawer_close">Жабық</string>
+
+</resources>

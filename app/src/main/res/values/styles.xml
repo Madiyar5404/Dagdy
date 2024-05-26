@@ -1,0 +1,29 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/windowBg</item>
+    </style>
+
+    <!--Field-->
+
+    <style name="CheckBoxShopsFilter" parent="Base.Theme.AppCompat">
+        <item name="colorAccent">#FFFFFF</item> <!-- for uncheck state -->
+        <item name="android:textColorSecondary">#FFFFFF</item> <!-- for check state -->
+    </style>
+
+    <style name="CustomTabLayoutStyle" parent="Widget.Design.TabLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/white</item>
+        <item name="tabGravity">fill</item>
+        <item name="tabMode">fixed</item>
+        <item name="tabTextColor">@color/black</item>
+        <item name="tabMaxWidth">0dp</item>
+        <item name="tabBackground">@drawable/tab_color_selector</item>
+        <item name="tabIndicatorColor">@color/red</item>
+        <item name="tabIndicatorHeight">4dp</item>
+    </style>
+</resources>

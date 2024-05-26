@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="field_mobile_number">Mobile number</string>
+
+    <string name="field_select_value">Choose a value</string>
+
+    <string name="field_error_empty">This field is required</string>
+
+    <string name="field_error_invalid_mobile_number">Please enter a valid number</string>
+    <string name="field_error_invalid_email">Enter correct email</string>
+
+    <string name="field_error_not_chosen">Nothing selected</string>
+    <string name="field_error_refresh">Failed to update</string>
+
+</resources>

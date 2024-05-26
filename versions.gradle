@@ -1,0 +1,68 @@
+ext {
+
+    kotlinVersion = '1.6.20'
+    jUnitVersion = '4.13.2'
+    testRunnerVersion = '1.4.0'
+    espressoCoreVersion ='3.4.0'
+
+    androidxAppcompat = '1.4.2'
+    androidxCoreKtx = '1.8.0'
+    androidxConstraintlayout = '2.1.4'
+    androidxRecyclerview = '1.2.1'
+    androidxCardview = '1.0.0'
+    androidxMultidex = '2.0.1'
+    viewpager = '1.0.0'
+
+    androidMaterial = '1.6.1'
+    androidFlexbox = '2.0.1'
+
+    fragmentKtx='1.5.0-rc01'
+
+    //arch components
+    lifecycleVersion = "2.4.1"
+
+    roomVersion = "2.4.2"
+
+    workRuntimeVersion = '1.0.1'
+
+    //navigationVersion = '2.2.0'
+    navigationVersion = '2.5.0-rc01'
+
+    //network
+//    retrofit2Version = '2.6.0'
+//
+//    okhttp3 = '3.14.2'
+//    okhttp3LoggingInterceptor = '3.14.2'
+    retrofit2Version = '2.9.0'
+
+    okhttp3 = '4.9.3'
+    okhttp3LoggingInterceptor = '4.9.3'
+
+    rx2Version = '2.2.6'
+    rxandroid2Version = '2.1.0'
+    retrofitAdapterRxJavaVersion = '2.6.0'
+    roomRxJava2 = "1.1.1"
+
+    //dagger2
+    dagger2Version = '2.42'
+
+    //image
+    glideVersion = '4.13.0'
+    glideTransformationsVersion = '4.0.1'
+
+    //animation
+    lottieVersion = '3.6.1'
+
+    //utils
+    inputMaskVersion = '4.1.0'
+    pageindicatorviewVersion = '1.0.3'
+
+    flagkitVersion = '1.0'
+
+    //
+    coroutineVersion = '1.1.1'
+
+    //
+    zxingAndroidEmbeddedVersion = '3.6.0'
+
+}

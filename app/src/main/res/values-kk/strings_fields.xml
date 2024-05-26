@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="field_mobile_number">Мобильдік телефон номері</string>
+
+    <string name="field_select_value">Мәнді таңдаңыз</string>
+
+    <string name="field_error_empty">Берілген өрісті толтыру қажет</string>
+
+    <string name="field_error_invalid_mobile_number">Жарамды нөмірді енгізіңіз</string>
+    <string name="field_error_invalid_email">Жарамды электрондық поштаны енгізіңіз</string>
+
+    <string name="field_error_not_chosen">Ештеңе таңдалмады</string>
+    <string name="field_error_refresh">Жаңарту мүмкін болмады</string>
+
+</resources>

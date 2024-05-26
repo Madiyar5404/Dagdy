@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="no_data">Көрсетілетін деректер жоқ</string>
+
+    <string name="drawer_open">Шарлау жолағын ашыңыз</string>
+    <string name="drawer_close">Шарлау жолағын жабыңыз</string>
+
+    <string name="app_name">Dagdy</string>
+    <string name="image_content_description">Кескін</string>
+    <string name="action_settings">Бұғаттамалар</string>
+    <string name="connection_error">Желімен байланысу мүмкін емес. Желімен байланысты тексеріңіз.</string>
+    <string name="server_error">Сервис уақытша қол жетімсіз. Кейінірек көріңіз.</string>
+    <string name="orders_current">Қазіргі</string>
+    <string name="orders_archive">Мұрағат</string>
+    <string name="orders_archive_u">МҰРАҒАТ</string>
+    <string name="filter">Фильтр</string>
+    <string name="filter_paid">Төленгендер</string>
+    <string name="filter_notpaid">Төленбегендер</string>
+    <string name="filter_all">Барлық тапсырыстар</string>
+    <string name="filter_waitPaid">Күтуші/Төленгендер</string>
+    <string name="filter_preorder">Алдын ала тапсырыс</string>
+    <string name="filter_payattable">PayAtTable</string>
+    <string name="save_login">Логинді сақтау</string>
+    <string name="enter">Кіру</string>
+    <string name="registration">Тіркелу</string>
+    <string name="toast_fields_not_filled">Барлық ақпараттар толтырылуы тиіс</string>
+    <string name="toast_not_valid_email">Дұрыс почтаны енгізіңіз\n</string>
+    <string name="no_orders">Тапсырыстар жоқ</string>
+    <!--  -->
+    <string name="order_close_confirmation">№%s тапсырысты мұрағатқа жіберуді растайсыз ба?</string>
+    <string name="order_accept_confirmation">№%s тапсырысты болдыруды растайсыз ба?</string>
+    <string name="order_decline_confirmation">№%s тапсырысты болдырмауды растайсыз ба?</string>
+    <string name="yes">Иә</string>
+    <string name="no">Жоқ</string>
+    <string name="enter_value">Мәнді енгізіңіз</string>
+    <string name="enter_login">Логин</string>
+    <string name="enter_password">Құпия сөз</string>
+    <!-- new design -->
+    <string name="order_number">Тапсырыс №: </string>
+    <string name="order_accept">Растау</string>
+    <string name="order_not_accept">Қабыл алмау</string>
+    <string name="order_close">Мұрағатқа жіберу</string>
+    <string name="update_time">Жаңарту: %s</string>
+    <string name="apply">Қолдану</string>
+
+    <string name="reserv_started">Убедитесь в наличии свободных мест в заведении на запрашиваему клиентом дату. Если нужна предоплата, укажите сумму, которую клиенту необходимо оплатить.</string>
+    <string name="reserv_paid">Бронь подтверждена, клиент успешно внес предоплату. Ожидайте клиента в указанную дату.</string>
+    <string name="reserv_accepted">Бронь подтверждена. Ожидайте клиента в указанную дату.</string>
+    <string name="reserv_rejected">Клиент отменил заявку на бронирование.</string>
+    <!-- order detail -->
+
+    <string name="detail_order_number"><![CDATA[<font color="#515151">Тапсырыс №:</font> <b>%s</b>]]></string>
+    <string name="detail_client_phone"><![CDATA[<font color="#515151">Байланыс телефоны:</font> <b>%s</b>]]></string>
+    <string name="detail_client_name"><![CDATA[<font color="#515151">Есім:</font> <b>%s</b>]]></string>
+    <string name="detail_client_name_2">Есім:</string>
+    <string name="detail_payment_sum">Төлемге</string>
+    <string name="detail_waiter_name"><![CDATA[<font color="#515151">Даяшы:</font> <b>%s</b>]]></string>
+    <string name="detail_guests_number"><![CDATA[<font color="#515151">Қонақ саны:</font> <b>%s</b>]]></string>
+    <string name="detail_order_date"><![CDATA[<font color="#515151">Тапсырыс күні:</font> <b>%s</b>]]></string>
+    <string name="detail_order_pickuptime"><![CDATA[<font color="#dd2c00">Тапсырыс беруші тапсырысты алып кетеді:</font> <b>%s</b>]]></string>
+
+    <!--  -->
+    <string name="order_detail">Тапсырыс егжейі</string>
+    <string name="order_status_wait">Қабыл алуды күтуде</string>
+    <string name="order_status_open">Тапсырыс қалыптастыру сатысында</string>
+    <string name="order_status_wait_title">Тапсырыс қабыл алуды күтуде</string>
+    <string name="order_status_closed">Тапсырыс жабылған</string>
+    <string name="order_status_paid">Тапсырыс төленген</string>
+    <string name="order_status_not_paid_archive">Тапсырыс төленбеген</string>
+    <string name="order_status_not_paid_current">Тапсырыс әлі төленбеген</string>
+    <!--  -->
+    <string name="choose_organization">Ұйымды таңдаңыз</string>
+    <string name="my_settings">Менің ақпараттарым</string>
+    <string name="language">Тіл</string>
+    <string name="exit">Шығу</string>
+    <string name="exit_confirmation">Шығуды растайсыз ба?</string>
+    <string name="temporarily_unavailable">Бұл функция уақытша қол жетімсіз</string>
+
+    <!-- notifications -->
+    <string name="notification_msg_count_more">+ %s жаңа хабарландырулар</string>
+    <string name="notification_msg_count">%s жаңа хабарландырулар</string>
+    <string name="notification_order">Тапсырыс</string>
+
+    <!-- new -->
+    <string name="order_decline_reason_title">Тапсырыс қабыл алмау себебі</string>
+    <string name="order_decline_reason">Себебін көрсетіңіз</string>
+
+    <string name="menu_items_error">Байланыс желісімен мәселе пайда болды. Қайтадан әрекет жасап көріңіз</string>
+
+    <string name="detail_order_delivery"><![CDATA[<font color="#515151">Жеткізу:</font> <b>%s</b>]]></string>
+    <string name="detail_comment_client"><![CDATA[<font color="#515151">Клиентің түсініктемесі:</font> <b>%s</b>]]></string>
+    <string name="detail_comment_manager"><![CDATA[<font color="#515151">Менеджер түсініктемесі:</font> <b>%s</b>]]></string>
+    <string name="delivery_away">Өзіммен бірге</string>
+    <string name="delivery_home">Үйге</string>
+    <string name="delivery_rest">Мекеменің ішінде</string>
+    <string name="wait">Өтінеміз, күте тұрыныз, сұраныс орындалуда</string>
+    <string name="decline_reason_1">Кешіріңіз, қазірге бұл тағам жоқ\u0020</string>
+    <string name="decline_reason_2">Дайын болады\u0020</string>
+
+
+    <string name="decline_reserv_1">В указанную Вами дату в заведении нет свободных мест.</string>
+    <string name="decline_reserv_2">В указанное Вами время заведение не работает.</string>
+    <string name="decline_reserv_3">Пожалуйста укажите другое время в этот же день.</string>
+    <string name="reserve_decline_reason_title">Причина отклонения</string>
+    <string name="admin">Администрирование</string>
+    <string name="accept_without_dep">ОК</string>
+    <string name="bind_waiter">Даяшыны тағайындаңыз</string>
+    <string name="assigned_tables"><![CDATA[<font color="#515151">Назначенные столы:</font> <b>%s</b>]]></string>
+    <string name="choose">Тізімнен таңдаңыз</string>
+    <string name="choose_dishes">Выберите блюда</string>
+    <string name="choose_org">Выбрать организацию</string>
+    <string name="choose_table">Столды таңдаңыз</string>
+    <string name="choose_waiter">Выберите официанта</string>
+    <string name="detail_order_delivery_address"><![CDATA[<font color="#515151">Адрес доставки:</font> <b>%s</b>]]></string>
+    <string name="detail_order_pickuptime_home"><![CDATA[<font color="#dd2c00">Отвезти заказ клиенту к:</font> <b>%s</b>]]></string>
+    <string name="detail_table_name"><![CDATA[<font color="#515151">Стол:</font> <b>%s</b>]]></string>
+
+
+    <string name="filter_cooking">Готовятся</string>
+    <string name="filter_preorder_home">Доставка</string>
+    <string name="none">Жоқ</string>
+    <string name="opened">Открытые</string>
+    <string name="order_is_ready">Сообщить клиенту что заказ готов?</string>
+    <string name="order_rkeeper_confirmation">Вы уверены, что хотите перенести заказ в R-keeper? (№%s)</string>
+    <string name="order_status_cooked">Заказ готов. Клиенту было отправлено уведомление.</string>
+    <string name="order_status_cooking">Заказ отправлен на кухню</string>
+    <string name="order_status_dish_cooking">Как только заказ будет готов, сообщите об этом клиенту, нажав соответствующую кнопку.</string>
+    <string name="order_status_paid_attable">Клиент оплатил заказ. Необходимо отметить заказ в кассе как оплаченный и отправить данный заказ в архив.</string>
+    <string name="order_status_paid_detail">Занести данный заказ в кассу, в комментариях к заказу указав Имя клиента и время, к которому нужно сделать заказ.</string>
+    <string name="order_status_paid_rkeeper">Заказ оплачен. Выберите стол, официанта и нажмите - Занести заказ в R-keeper. После этого заказ появится в R-keeper. Обратите внимание на детали заказа.</string>
+    <string name="order_status_wait_attable">Поступил заказ. Убедитесь в наличии заказанных товаров, занесите заказ в кассу, отправьте на кухню и нажмите «Одобрить». В случае если требуется уточнение, либо блюда отсутствуют, нажмите кнопку – «Отменить», указав необходимый комментарий.</string>
+    <string name="order_status_wait_detail">Убедитесь в наличии заказанных товаров и нажмите «Одобрить». В случае если требуется уточнение, либо блюда отсутствуют, нажмите кнопку – «Отменить», указав необходимый комментарий.</string>
+    <string name="order_to_cook">Вы уверены, что хотите отправить заказ на кухню?</string>
+    <string name="orders">Заказы</string>
+    <string name="organization_is_null">Сначала выберите организацию</string>
+    <string name="reserv_confirm_cancelled">Ранее подтвержденная заявка на бронь отменена клиентом. Если вы заносили ее в свой журнал бронирований, уберите из него запись.</string>
+    <string name="reserv_written">Заявка на бронь подтверждена и занесена в журнал запланированных бронирований.</string>
+    <string name="reservation">Бронь</string>
+    <string name="reservation_accept_confirmation">Вы уверены, что хотите подтвердить бронь №%s?</string>
+    <string name="reservation_accepted">Бронь подтверждена</string>
+    <string name="reservation_cancelled">Бронь отменена клиентом</string>
+    <string name="reservation_close_confirmation">Вы уверены, что хотите отправить в архив бронь №%s?</string>
+    <string name="reservation_closed">Бронь закрыта</string>
+    <string name="reservation_confirm_cancelled">Ранее подтвержденная бронь отменена пользователем</string>
+    <string name="reservation_decline_confirmation">Вы уверены, что хотите отклонить бронь №%s?</string>
+    <string name="reservation_detail">Детали бронирования</string>
+    <string name="reservation_napproved">Бронь отклонена</string>
+    <string name="reservation_opendate"><![CDATA[<font color="#515151">Дата брони (дд/мм/гг):</font> <b>%s</b>]]></string>
+    <string name="reservation_paid">Бронь Оплачена</string>
+    <string name="reservation_started">Бронь ожидает подтверждения</string>
+    <string name="reservation_status_accepted">Бронь подтверждена</string>
+    <string name="reservation_status_closes">Бронь закрыта</string>
+    <string name="reservation_status_napproved">Бронь отклонена</string>
+    <string name="reservation_status_started">Ожидает подтверждения</string>
+    <string name="reservation_summ_enter">Введите необходимую сумму депозита</string>
+    <string name="reservation_status_started_title">Бронь ожидает подтверждения</string>
+    <string name="reservation_todate"><![CDATA[<font color="#dd2c00">Бронь зарезервирована на (дд/мм/гг):</font> <b>%s</b>]]></string>
+    <string name="reservation_written">Бронь занесена в список запланированных</string>
+    <string name="reservation_written_confirmation">Вы уверены, что хотите занести бронь в список запланированных?</string>
+    <string name="settings">Настройки</string>
+    <string name="melody">Мелодия</string>
+    <string name="table_id"><![CDATA[<font color="#515151">Номер стола:</font> <b>%s</b>]]></string>
+    <string name="tables">Столдар</string>
+    <string name="to_process">Обработать</string>
+    <string name="update_app">Қолданбаны жаңартыңыз</string>
+    <string name="waiter_name"><![CDATA[<font color="#515151">Имя официанта:</font> <b>%s</b>]]></string>
+    <string name="waiters">Даяшылар</string>
+    <string name="you_entered_deposit_summ">Вы указали сумму депозита, нажмите на кнопку Подтвердить с депозитом</string>
+    <string name="you_not_entered_deposit_summ">Вы не указали сумму депозита, нажмите на кнопку Подтвердить без депозита</string>
+    <string name="order_status_archive">ЗАКАЗ В АРХИВЕ.</string>
+    <string name="order_status_archive_payed">АРХИВ. Заказ был оплачен.</string>
+    <string name="order_status_archive_not_payed">АРХИВ. Заказ не был оплачен.</string>
+
+    <string name="detail_order_couriertime_home"><![CDATA[<font color="#dd2c00">ОТДАТЬ ЗАКАЗ КУРЬЕРУ В:</font> <b>%s</b>]]></string>
+
+    <string name="order_accept_not_cook">Одобрить (ДО ОПЛАТЫ НЕ ГОТОВИТЬ)</string>
+    <string name="decline_reason_3">Извините, но Ваш адрес вне зоны доставки.</string>
+    <string name="order_status_template_paid">ЗАКАЗ ОПЛАЧЕН. Если все блюда в наличии, можете приступать к исполнению в указанное время.</string>
+    <string name="decline_reserv_4">Истекло время для внесения предоплаты.</string>
+    <string name="melody_1">Әуен 1 (Тыныш)</string>
+    <string name="melody_2">Әуен 2 (Қаттырақ)</string>
+    <string name="listen">Тыңдау</string>
+
+</resources>

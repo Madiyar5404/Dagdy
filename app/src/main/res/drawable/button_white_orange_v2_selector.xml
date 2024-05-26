@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+<!--    <item android:drawable="@drawable/button_white_orange_v2_clicked"-->
+<!--        android:state_focused="true"-->
+<!--        android:state_pressed="true"/>-->
+<!--    <item android:drawable="@drawable/button_white_orange_v2_normal"/>-->
+
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <stroke
+                android:width="@dimen/dp_2"
+                android:color="@color/orange" />
+
+            <gradient
+                android:angle="90"
+                android:endColor="@color/line_divider_v2"
+                android:startColor="@color/line_divider_v2"
+                android:type="linear" />
+
+            <corners
+                android:bottomLeftRadius="@dimen/dp_4"
+                android:bottomRightRadius="@dimen/dp_4"
+                android:topLeftRadius="@dimen/dp_4"
+                android:topRightRadius="@dimen/dp_4" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <stroke
+                android:width="@dimen/dp_2"
+                android:color="@color/orange" />
+
+            <gradient
+                android:angle="90"
+                android:endColor="@color/white"
+                android:startColor="@color/white"
+                android:type="linear" />
+
+            <corners
+                android:bottomLeftRadius="@dimen/dp_4"
+                android:bottomRightRadius="@dimen/dp_4"
+                android:topLeftRadius="@dimen/dp_4"
+                android:topRightRadius="@dimen/dp_4" />
+        </shape>
+    </item>
+
+</selector>
