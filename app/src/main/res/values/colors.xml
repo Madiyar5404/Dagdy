@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="colorPrimary">@color/E61E5A</color>
+    <color name="colorPrimary">@color/black</color>
     <color name="colorPrimaryDark">@color/_979797</color>
     <color name="colorAccent">@color/_03B7BC</color>
 
@@ -16,6 +16,10 @@
 
     <!---->
     <color name="transparent">#00000000</color>
+
+    <!--TEXT VIEW-->
+    <color name="authorizedTrueTextColor">#27272A</color>
+    <color name="authorizedBlackTextColor">#18181B</color>
 
     <color name="white">#FFFFFF</color>
     <color name="mainColor">#EEE1CB</color>
@@ -88,6 +92,7 @@
 
     <color name="bottomNavigationCheckedTrue">#A1A1AA</color>
     <color name="bottomNavigationCheckedFalse">#000000</color>
+    <color name="view_color">#D8DADC</color>
 
 </resources>
 

@@ -15,9 +15,9 @@
         android:name=".App"
         android:allowBackup="false"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ic_logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/ic_logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:appComponentFactory">
@@ -27,12 +27,12 @@
         <activity
             android:name=".ui.activities.authorized.AuthorizedActivity"
             android:exported="false"
-            android:label="@string/title_activity_authorized"
+            android:label="@string/dagdy"
             android:theme="@style/AppTheme" />
         <activity
             android:name=".ui.activities.splash.SplashActivity"
             android:exported="true"
-            android:screenOrientation="fullSensor"
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

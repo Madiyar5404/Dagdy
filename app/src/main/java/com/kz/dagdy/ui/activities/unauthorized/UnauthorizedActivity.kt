@@ -27,7 +27,6 @@ class UnauthorizedActivity : BaseActivity() {
         binding.lifecycleOwner = this
 
         initAndObserveViewModel()
-        binding.viewModel = viewModel
         initView()
     }
 

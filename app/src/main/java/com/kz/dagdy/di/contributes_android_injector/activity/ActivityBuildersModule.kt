@@ -9,7 +9,6 @@ import dagger.Module
 import dagger.android.ContributesAndroidInjector
 import com.kz.dagdy.di.contributes_android_injector.fragment.SplashFragmentsBuildersModule
 import com.kz.dagdy.di.contributes_android_injector.fragment.UnauthorizedFragmentsBuildersModule
-import com.kz.dagdy.di.contributes_android_injector.fragment.WelcomeFragmentsBuildersModule
 import com.kz.dagdy.ui.activities.authorized.AuthorizedActivity
 import com.kz.dagdy.ui.activities.unauthorized.UnauthorizedActivity
 
@@ -18,8 +17,7 @@ abstract class ActivityBuildersModule {
 
     @ContributesAndroidInjector(
         modules = [
-            SplashFragmentsBuildersModule::class,
-            WelcomeFragmentsBuildersModule::class
+            SplashFragmentsBuildersModule::class
         ]
     )
     internal abstract fun splashActivity(): SplashActivity

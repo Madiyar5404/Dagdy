@@ -9,6 +9,7 @@ import androidx.lifecycle.Observer
 import com.kz.dagdy.R
 import com.kz.dagdy.databinding.FragmentSplashBinding
 import com.kz.dagdy.ui.activities.authorized.AuthorizedActivity
+import com.kz.dagdy.ui.activities.unauthorized.UnauthorizedActivity
 import com.kz.dagdy.ui_common.base.BaseFragment
 
 class SplashFragment : BaseFragment() {
@@ -40,12 +41,11 @@ class SplashFragment : BaseFragment() {
             viewLifecycleOwner,
             Observer {
                 it.getContentIfNotHandled()?.let {
-                    val intent = AuthorizedActivity.getIntent(context)
+                    val intent = UnauthorizedActivity.getIntent(context)
                     startActivity(intent)
                     activity?.finish()
                 }
             }
         )
     }
-
 }

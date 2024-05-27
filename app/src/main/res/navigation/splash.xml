@@ -11,5 +11,4 @@
         android:label="SplashFragment"
         tools:layout="@layout/fragment_splash" />
 
-    <include app:graph="@navigation/welcome" />
 </navigation>

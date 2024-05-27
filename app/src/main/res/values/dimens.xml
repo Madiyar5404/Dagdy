@@ -30,6 +30,8 @@
     <dimen name="sp_33">33sp</dimen>
     <dimen name="sp_34">34sp</dimen>
     <dimen name="sp_39">39sp</dimen>
+    <dimen name="sp_60">60sp</dimen>
+    <dimen name="sp_80">80sp</dimen>
     <!--<dimen name="sp_39_5">39.5sp</dimen>-->
 
     <dimen name="dp_0">0dp</dimen>

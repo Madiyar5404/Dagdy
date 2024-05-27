@@ -19,12 +19,13 @@
         <item name="android:layout_width">@dimen/dp_0</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:theme">@style/TextInputLayoutTheme</item>
+
         <item name="boxBackgroundColor">@color/transparent</item>
         <item name="android:textColorHint">@color/black40</item>
-        <item name="boxCornerRadiusBottomEnd">@dimen/dp_0</item>
-        <item name="boxCornerRadiusBottomStart">@dimen/dp_0</item>
-        <item name="boxCornerRadiusTopEnd">@dimen/dp_0</item>
-        <item name="boxCornerRadiusTopStart">@dimen/dp_0</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/dp_12</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/dp_12</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/dp_12</item>
+        <item name="boxCornerRadiusTopStart">@dimen/dp_12</item>
     </style>
 
     <style name="EditTextStyle" parent="Font.Regular">
@@ -93,7 +94,27 @@
         <item name="android:textSize">@dimen/sp_16</item>
         <item name="android:textColor">@color/et_color</item>
         <item name="android:textColorHint">@color/et_hint</item>
-        <item name="android:hint">@string/enter_value</item>
+    </style>
+
+    <style name="TextInputLayoutStyle.OutlinedBox.Phone" parent="TextInputLayoutStyle.OutlinedBox">
+        <item name="hintEnabled">true</item>
+        <item name="startIconDrawable">@drawable/ic_user</item>
+        <item name="startIconTint">@null</item>
+    </style>
+
+    <style name="TextInputLayoutStyle.OutlinedBox.Email" parent="TextInputLayoutStyle.OutlinedBox">
+        <item name="hintEnabled">true</item>
+        <item name="startIconDrawable">@drawable/ic_email</item>
+        <item name="startIconTint">@null</item>
+    </style>
+
+    <style name="TextInputLayoutStyle.OutlinedBox.Password" parent="TextInputLayoutStyle.OutlinedBox">
+        <item name="hintEnabled">true</item>
+        <item name="endIconMode">password_toggle</item>
+        <item name="endIconDrawable">@drawable/custom_password_toggle</item>
+        <item name="startIconDrawable">@drawable/ic_key</item>
+        <item name="endIconTint">@null</item>
+        <item name="startIconTint">@null</item>
     </style>
 
 </resources>
