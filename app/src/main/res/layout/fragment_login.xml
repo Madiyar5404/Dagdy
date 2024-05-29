@@ -10,7 +10,7 @@
         <variable
             name="viewModel"
             type="com.kz.dagdy.ui.auth.login.LoginViewModel" />
-
+<!-- 2 ші ветка ашу-->
         <variable
             name="phoneViewModel"
             type="com.kz.dagdy.ui_common.phone.PhoneViewModel" />
