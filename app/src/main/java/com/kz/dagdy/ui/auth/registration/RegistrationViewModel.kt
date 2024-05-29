@@ -34,6 +34,7 @@ class RegistrationViewModel
     private val _openAuthorizedActivity = MutableLiveData<Event<Unit>>()
     val openAuthorizedActivity: LiveData<Event<Unit>>
         get() = _openAuthorizedActivity
+
     /**
      * CHECK LOGIN
      */
@@ -103,14 +104,15 @@ class RegistrationViewModel
         }
 
     fun onSendUserResourceSuccess(registerResponse: RegisterResponse?) {
-            registerResponse?.let {
-                it.token?.let {
-                    preferences.setAppToken(it)
-                }
+        registerResponse?.let {
+            it.token?.let {
+                preferences.setAppToken(it)
             }
-            preferences.apply {
-                getAppToken()?.let {
-                    setAppToken(it) }
+        }
+        preferences.apply {
+            getAppToken()?.let {
+                setAppToken(it)
             }
         }
     }
+}

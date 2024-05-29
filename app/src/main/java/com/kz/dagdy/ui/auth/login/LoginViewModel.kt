@@ -4,7 +4,13 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.Transformations
 import com.kz.dagdy.R
+import com.kz.dagdy.data.models.auth.login.LoginRequest
+import com.kz.dagdy.data.models.auth.login.LoginResponse
+import com.kz.dagdy.data.models.auth.registration.RegisterResponse
+import com.kz.dagdy.data.preferences.Preferences
+import com.kz.dagdy.data.repository.auth.AuthRepository
 import com.kz.dagdy.ui_common.phone.PhoneCallback
 import com.kz.dagdy.ui_common.phone.PhoneFieldTextChangedCallback
 import com.kz.dagdy.utils.live_data.Event
@@ -13,7 +19,9 @@ import javax.inject.Inject
 class LoginViewModel
 @Inject
 constructor(
-    private val app: Application
+    private val app: Application,
+    private val repository: AuthRepository,
+    private val preferences: Preferences
 ) : AndroidViewModel(app) {
     private lateinit var phoneCallback: PhoneCallback
 
@@ -28,6 +36,7 @@ constructor(
     private val _openAuthorizedActivity = MutableLiveData<Event<Unit>>()
     val openAuthorizedActivity: LiveData<Event<Unit>>
         get() = _openAuthorizedActivity
+
     /**
      * CHECK LOGIN
      */
@@ -56,24 +65,50 @@ constructor(
     fun onAuthBtnClick() {
 
         _hideKeyboard.postValue(Event(Unit))
+        sendUserData.postValue(Unit)
 
-        if(checkFields()){
-            _openAuthorizedActivity.postValue(Event(Unit))
+//        if (checkFields()) {
+//            _openAuthorizedActivity.postValue(Event(Unit))
+//        }
+    }
+
+//    fun checkFields(): Boolean {
+//        val phoneFieldsOk = phoneCallback.fieldsOk()
+//        val pwdFieldsNotEmpty = !passwordFieldText.value.isNullOrBlank()
+//
+//        if (!phoneFieldsOk) {
+//            phoneCallback.showFieldErrors()
+//        }
+//
+//        if (!pwdFieldsNotEmpty) {
+//            passwordFieldError.postValue(app.getString(R.string.field_error_empty))
+//        }
+//
+//        return phoneFieldsOk && pwdFieldsNotEmpty
+//    }
+
+    private val sendUserData = MutableLiveData<Unit>()
+    val emailFieldText = MutableLiveData<String>()
+    val phoneFieldText = MutableLiveData<String?>()
+
+    val sendUserDataResource =
+        Transformations.switchMap(sendUserData) {
+            val email = emailFieldText.value ?: ""
+            val password = passwordFieldText.value ?: ""
+            repository.login(LoginRequest(email, password))
+        }
+
+    fun onSendUserResourceSuccess(loginResponse: LoginResponse?) {
+        loginResponse?.let {
+            it.token?.let {
+                preferences.setAppToken(it)
+            }
+        }
+        preferences.apply {
+            getAppToken()?.let {
+                setAppToken(it)
+            }
         }
     }
 
-    fun checkFields(): Boolean {
-        val phoneFieldsOk = phoneCallback.fieldsOk()
-        val pwdFieldsNotEmpty = !passwordFieldText.value.isNullOrBlank()
-
-        if(!phoneFieldsOk){
-            phoneCallback.showFieldErrors()
-        }
-
-        if(!pwdFieldsNotEmpty){
-            passwordFieldError.postValue(app.getString(R.string.field_error_empty))
-        }
-
-        return phoneFieldsOk && pwdFieldsNotEmpty
-    }
 }

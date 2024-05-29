@@ -101,9 +101,11 @@
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/et_email"
-                        style="@style/EditTextStyle.Password"
+                        style="@style/EditTextStyle.Email"
                         android:hint="@string/sizdin_email"
+                        android:afterTextChanged="@{() -> phoneViewModel.onPhoneFieldTextChanged()}"
                         android:imeOptions="actionDone"
+                        android:text="@={viewModel.emailFieldText}"
                         android:paddingStart="@dimen/dp_1" />
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -126,7 +128,6 @@
                     style="@style/TextInputLayoutStyle.OutlinedBox.Password"
                     android:layout_width="match_parent"
                     android:layout_marginTop="@dimen/dp_6"
-                    app:errorText="@{viewModel.passwordFieldError}"
                     app:hintEnabled="false"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent">

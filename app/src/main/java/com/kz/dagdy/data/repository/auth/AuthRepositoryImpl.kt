@@ -2,6 +2,7 @@ package com.kz.dagdy.data.repository.auth
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import com.kz.dagdy.data.models.auth.login.LoginRequest
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.observers.DisposableSingleObserver
 import io.reactivex.schedulers.Schedulers
@@ -40,11 +41,11 @@ class AuthRepositoryImpl
         return liveData
     }
 
-    override fun login(params: Map<String, String>): LiveData<Event<Resource<LoginResponse>>> {
+    override fun login(body: LoginRequest): LiveData<Event<Resource<LoginResponse>>> {
         val liveData = MutableLiveData<Event<Resource<LoginResponse>>>()
 
         api
-            .login(params)
+            .login(body)
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .doOnSubscribe { liveData.postValue(Event(Resource.loading(null))) }

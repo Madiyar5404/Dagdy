@@ -11,8 +11,6 @@
             name="viewModel"
             type="com.kz.dagdy.ui.auth.registration.RegistrationViewModel" />
 
-
-
         <variable
             name="phoneViewModel"
             type="com.kz.dagdy.ui_common.phone.PhoneViewModel" />
