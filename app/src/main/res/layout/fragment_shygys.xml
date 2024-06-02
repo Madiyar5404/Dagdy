@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="com.kz.dagdy.ui.qarjy.shygys.ShygysViewModel" />
+
+        <variable
+            name="viewModel"
+            type="com.kz.dagdy.ui.qarjy.shygys.ShygysViewModel" />
+
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@color/mainBg"
+        android:layout_height="match_parent">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.kz.dagdy.ui.custom_view.piechart.customView.PieChart
+                android:id="@+id/analyticalPieChart_1"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:pieChartCircleStrokeWidth="@dimen/dp_6"
+                app:pieChartTextAmountColor="@color/black"
+                app:pieChartTextDescriptionColor="?android:attr/textColorHint"
+                app:pieChartTextDescriptionSize="@dimen/sp_14"
+                app:pieChartTextNumberColor="@color/black"
+                app:pieChartTextNumberSize="@dimen/sp_16" />
+
+            <FrameLayout
+                android:id="@+id/bottomFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom"
+                app:behavior_hideable="false"
+                app:behavior_peekHeight="270dp"
+                app:layout_behavior="@string/bottom_sheet_behavior">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:background="@drawable/top_corner_radius"
+                    android:elevation="@dimen/dp_12">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/mcv_line"
+                        android:layout_width="@dimen/dp_40"
+                        android:layout_height="@dimen/dp_4"
+                        android:layout_marginTop="@dimen/dp_8"
+                        android:elevation="@dimen/dp_0"
+                        app:cardBackgroundColor="#E2E5E9"
+                        app:cardCornerRadius="@dimen/dp_100"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </FrameLayout>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

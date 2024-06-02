@@ -11,13 +11,7 @@ import com.kz.dagdy.databinding.ActivityUnauthorizedBinding
 import com.kz.dagdy.ui_common.base.BaseActivity
 
 class UnauthorizedActivity : BaseActivity() {
-
-    companion object {
-        fun getIntent(context: Context?) = Intent(context, UnauthorizedActivity::class.java)
-    }
-
     private lateinit var binding: ActivityUnauthorizedBinding
-    private lateinit var viewModel: UnauthorizedViewModel
     private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,12 +20,7 @@ class UnauthorizedActivity : BaseActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_unauthorized)
         binding.lifecycleOwner = this
 
-        initAndObserveViewModel()
         initView()
-    }
-
-    private fun initAndObserveViewModel() {
-        viewModel = getViewModel(UnauthorizedViewModel::class.java)
     }
 
     private fun initView() {
@@ -47,5 +36,9 @@ class UnauthorizedActivity : BaseActivity() {
                 }
             }
         }
+    }
+
+    companion object {
+        fun getIntent(context: Context?) = Intent(context, UnauthorizedActivity::class.java)
     }
 }

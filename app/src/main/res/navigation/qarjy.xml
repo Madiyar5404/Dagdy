@@ -2,13 +2,14 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    app:startDestination="@id/qarjyFragment"
-    android:id="@+id/navigation_qarjy">
+    android:id="@+id/navigation_qarjy"
+    app:startDestination="@id/qarjyFragment">
 
     <fragment
         android:id="@+id/qarjyFragment"
         android:name="com.kz.dagdy.ui.qarjy.QarjyFragment"
         android:label="QarjyFragment"
-        tools:layout="@layout/fragment_qarjy" />
+        tools:layout="@layout/fragment_qarjy">
 
+    </fragment>
 </navigation>

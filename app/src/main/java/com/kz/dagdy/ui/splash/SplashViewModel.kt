@@ -2,6 +2,7 @@ package com.kz.dagdy.ui.splash
 
 import android.app.Application
 import android.os.CountDownTimer
+import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -43,7 +44,7 @@ class SplashViewModel
 
     private fun openNext() {
         if (preferences.getAppToken().isNullOrEmpty()) {
-            _openUnAuth.postValue(Event(Unit))
+            _openMain.postValue(Event(Unit))
         } else {
             _openMain.postValue(Event(Unit))
         }

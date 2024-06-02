@@ -33,10 +33,6 @@ constructor(
     val hideKeyboard: LiveData<Event<Unit>>
         get() = _hideKeyboard
 
-    private val _openAuthorizedActivity = MutableLiveData<Event<Unit>>()
-    val openAuthorizedActivity: LiveData<Event<Unit>>
-        get() = _openAuthorizedActivity
-
     /**
      * CHECK LOGIN
      */
@@ -89,7 +85,6 @@ constructor(
 
     private val sendUserData = MutableLiveData<Unit>()
     val emailFieldText = MutableLiveData<String>()
-    val phoneFieldText = MutableLiveData<String?>()
 
     val sendUserDataResource =
         Transformations.switchMap(sendUserData) {
@@ -109,6 +104,22 @@ constructor(
                 setAppToken(it)
             }
         }
+    }
+
+    private val _openRegister = MutableLiveData<Event<Unit>>()
+    val openRegister: LiveData<Event<Unit>>
+        get() = _openRegister
+
+    fun onRegisterBtnClick() {
+        _openRegister.postValue(Event(Unit))
+    }
+
+    private val _openAuthorizedActivity = MutableLiveData<Event<Unit>>()
+    val openAuthorizedActivity: LiveData<Event<Unit>>
+        get() = _openAuthorizedActivity
+
+    fun onSuccess() {
+        _openAuthorizedActivity.postValue(Event(Unit))
     }
 
 }

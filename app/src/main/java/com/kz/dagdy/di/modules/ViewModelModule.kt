@@ -5,8 +5,10 @@ import com.kz.dagdy.di.view_model.ActivityViewModelModule
 import com.kz.dagdy.di.view_model.AdetViewModelModule
 import com.kz.dagdy.di.view_model.AuthenticationViewModelModule
 import com.kz.dagdy.di.view_model.BaptauViewModelModule
+import com.kz.dagdy.di.view_model.DialogViewModelModule
 import com.kz.dagdy.di.view_model.JazbaViewModelModule
 import com.kz.dagdy.di.view_model.QarjyViewModelModule
+import com.kz.dagdy.di.view_model.QosuViewModelModule
 import com.kz.dagdy.di.view_model.SplashViewModelModule
 
 @Module(
@@ -17,7 +19,9 @@ import com.kz.dagdy.di.view_model.SplashViewModelModule
         QarjyViewModelModule::class,
         AdetViewModelModule::class,
         JazbaViewModelModule::class,
-        BaptauViewModelModule::class
+        BaptauViewModelModule::class,
+        QosuViewModelModule::class,
+        DialogViewModelModule::class
     ]
 )
 class ViewModelModule {

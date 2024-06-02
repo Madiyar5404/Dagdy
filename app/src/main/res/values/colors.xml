@@ -20,9 +20,10 @@
     <!--TEXT VIEW-->
     <color name="authorizedTrueTextColor">#27272A</color>
     <color name="authorizedBlackTextColor">#18181B</color>
+    <color name="authorizedGreyTextColor">#878788</color>
 
     <color name="white">#FFFFFF</color>
-    <color name="mainColor">#EEE1CB</color>
+    <color name="mainBg">#EAE9E9</color>
     <color name="whitish">#EBFFFFFF</color>
     <color name="white10">#1AFFFFFF</color>
     <color name="white30">#4DFFFFFF</color>
@@ -93,6 +94,29 @@
     <color name="bottomNavigationCheckedTrue">#A1A1AA</color>
     <color name="bottomNavigationCheckedFalse">#000000</color>
     <color name="view_color">#D8DADC</color>
+    <color name="borderColor">#CBD3DA</color>
+
+
+    <color name="colorTextTitleSample">#AFDDF5</color>
+    <color name="colorTextHeader">#354148</color>
+    <color name="colorTextHeaderTitle">#03121A</color>
+    <color name="colorTextHoliday">#000000</color>
+    <color name="colorTitleDayXiaomi">#939393</color>
+    <color name="colorTitleMonthXiaomi">#000000</color>
+    <color name="colorDayActive">#181818</color>
+    <color name="colorChooseDay">#FBFBFB</color>
+    <color name="colorDayNoActive">#c9c9c9</color>
+    <color name="colorLineHeader">#dcdcdc</color>
+    <color name="colorAmountIncome">#008425</color>
+    <color name="goldenrod">#D0A200</color>
+    <color name="vanilla">#D0C498</color>
+    <color name="turquoise">#068383</color>
+    <color name="pale">#83C0C0</color>
+    <color name="dusty">#CBD3DA</color>
+    <color name="hunter">#09401C</color>
+    <color name="misty">#000000</color>
+    <color name="item_adet">#F4F4F4</color>
+    <color name="percent_adet">#6FD61F</color>
 
 </resources>
 

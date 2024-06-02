@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.kz.dagdy.data.models.dialog.selection_sorted_date.SelectionDate" />
+
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/top_corner_radius"
+        android:orientation="vertical"
+        tools:layout_gravity="bottom">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingVertical="@dimen/dp_8"
+            android:src="@drawable/ic_bottom_dialog_handle" />
+
+        <TextView
+            android:id="@+id/tv_type_date"
+            style="@style/Font.SemiBold.CrimsonPro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_11"
+            android:text="@{data.title}"
+            android:textColor="@color/authorizedTrueTextColor"
+            android:textSize="@dimen/sp_28"
+            tools:text="Aiyna" />
+
+        <TextView
+            android:id="@+id/tv_tanda"
+            style="@style/Font.SemiBold.CrimsonPro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_8"
+            android:text="@string/aralyqty_tandanyz"
+            android:textColor="@color/authorizedGreyTextColor"
+            android:textSize="@dimen/sp_20" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:layout_marginHorizontal="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_16"
+            android:background="@color/borderColor" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_type_sorted_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_16"
+            android:layout_marginBottom="@dimen/dp_45"
+            android:orientation="vertical"
+            android:overScrollMode="never"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:itemCount="3"
+            tools:listitem="@layout/item_chooser_sorted_date_dialog" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</layout>

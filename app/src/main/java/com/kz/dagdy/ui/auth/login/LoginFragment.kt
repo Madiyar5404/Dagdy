@@ -6,10 +6,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import com.kz.dagdy.R
 import com.kz.dagdy.data.models.network.Status
 import com.kz.dagdy.databinding.FragmentLoginBinding
+import com.kz.dagdy.ui.activities.authorized.AuthorizedActivity
+import com.kz.dagdy.ui.activities.unauthorized.UnauthorizedActivity
 import com.kz.dagdy.ui_common.base.BaseFragment
+import com.kz.dagdy.utils.navigation.getSlideLeftAnimBuilder
 
 class LoginFragment : BaseFragment() {
 
@@ -32,30 +36,62 @@ class LoginFragment : BaseFragment() {
         viewModel = getViewModel(LoginViewModel::class.java)
         binding.viewModel = viewModel
 
-        observeViewModel()
+        binding.tvBtnToRegistraion.setOnClickListener {
+            viewModel.onRegisterBtnClick()
+        }
+
+        initAndObserveViewModel()
     }
 
-    private fun observeViewModel() {
-        viewModel.sendUserDataResource.observe(
-            viewLifecycleOwner,
-            Observer {
-                it.getContentIfNotHandled()?.let {
-                    when (it.status) {
-                        Status.LOADING -> {
-                            showProgressDialog()
-                        }
-                        Status.SUCCESS -> {
-                            dismissProgressDialog()
-                            viewModel.onSendUserResourceSuccess(it.data)
-                        }
-                        Status.ERROR -> {
-                            dismissProgressDialog()
-                            handleExceptionDialog(it.exception)
+    private fun initAndObserveViewModel() {
+        viewModel.apply {
+            sendUserDataResource.observe(
+                viewLifecycleOwner,
+                Observer {
+                    it.getContentIfNotHandled()?.let {
+                        when (it.status) {
+                            Status.LOADING -> {
+                                showProgressDialog()
+                            }
+
+                            Status.SUCCESS -> {
+                                dismissProgressDialog()
+                                viewModel.onSendUserResourceSuccess(it.data)
+                                viewModel.onSuccess()
+                            }
+
+                            Status.ERROR -> {
+                                dismissProgressDialog()
+                                handleExceptionDialog(it.exception)
+                            }
                         }
                     }
                 }
-            }
-        )
-    }
+            )
 
+            openRegister.observe(
+                viewLifecycleOwner,
+                Observer {
+                    it.getContentIfNotHandled()?.let {
+                        findNavController().navigate(
+                            R.id.navigation_registration,
+                            Bundle.EMPTY,
+                            getSlideLeftAnimBuilder().build()
+                        )
+                    }
+                }
+            )
+
+            viewModel.openAuthorizedActivity.observe(
+                viewLifecycleOwner,
+                Observer {
+                    it.getContentIfNotHandled()?.let {
+                        val intent = AuthorizedActivity.getIntent(context)
+                        startActivity(intent)
+                        activity?.finish()
+                    }
+                }
+            )
+        }
+    }
 }

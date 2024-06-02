@@ -7,6 +7,5 @@ import kotlinx.parcelize.Parcelize
 @Parcelize
 data class RegisterResponse(
     @SerializedName("result")
-    var token: String?,
-
+    var token: String?
 ) : Parcelable

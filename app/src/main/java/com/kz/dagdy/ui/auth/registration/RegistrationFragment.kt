@@ -6,11 +6,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import com.kz.dagdy.R
 import com.kz.dagdy.data.models.network.Status
 import com.kz.dagdy.databinding.FragmentRegistrationBinding
 import com.kz.dagdy.ui_common.base.BaseFragment
 import com.kz.dagdy.ui_common.phone.PhoneViewModel
+import com.kz.dagdy.utils.navigation.getSlideLeftAnimBuilder
 
 class RegistrationFragment : BaseFragment() {
 
@@ -35,30 +37,61 @@ class RegistrationFragment : BaseFragment() {
         viewModel = getViewModel(RegistrationViewModel::class.java)
         binding.viewModel = viewModel
 
-        observeViewModel()
+        binding.tvBtnToLogin.setOnClickListener {
+            viewModel.onLoginBtnClick()
+        }
+
+        initAndObserveViewModel()
     }
 
-    private fun observeViewModel() {
-        viewModel.sendUserDataResource.observe(
-            viewLifecycleOwner,
-            Observer {
-                it.getContentIfNotHandled()?.let {
-                    when (it.status) {
-                        Status.LOADING -> {
-                            showProgressDialog()
-                        }
-                        Status.SUCCESS -> {
-                            dismissProgressDialog()
-                            viewModel.onSendUserResourceSuccess(it.data)
-                        }
-                        Status.ERROR -> {
-                            dismissProgressDialog()
-                            handleExceptionDialog(it.exception)
+    private fun initAndObserveViewModel() {
+        viewModel.apply {
+            sendUserDataResource.observe(
+                viewLifecycleOwner,
+                Observer {
+                    it.getContentIfNotHandled()?.let {
+                        when (it.status) {
+                            Status.LOADING -> {
+                                showProgressDialog()
+                            }
+
+                            Status.SUCCESS -> {
+                                dismissProgressDialog()
+                                viewModel.onSendUserResourceSuccess(it.data)
+                            }
+
+                            Status.ERROR -> {
+                                dismissProgressDialog()
+                                handleExceptionDialog(it.exception)
+                            }
                         }
                     }
                 }
-            }
-        )
+            )
+
+            openLogin.observe(
+                viewLifecycleOwner,
+                Observer {
+                    it.getContentIfNotHandled()?.let {
+                        findNavController().navigate(
+                            R.id.navigation_login,
+                            Bundle.EMPTY,
+                            getSlideLeftAnimBuilder().build()
+                        )
+                    }
+                }
+            )
+
+            popBackStack.observe(
+                viewLifecycleOwner,
+                Observer {
+                    it.getContentIfNotHandled()?.let {
+                        findNavController().popBackStack()
+                    }
+                }
+            )
+
+        }
     }
 
 }

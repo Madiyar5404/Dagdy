@@ -19,6 +19,58 @@
     <string name="tirkelu">Tırkelu</string>
     <string name="sizdin_email">Sizdin email</string>
     <string name="qupia_soziniz">Qūpia sözıñız</string>
+    <string name="kiris">Kırıs</string>
+    <string name="shygys">Şyğys</string>
+    <string name="barlygy">Barlyğy</string>
+    <string name="dot">•</string>
 
+
+    <string-array name="all">
+        <item>Доходы</item>
+        <item>Расходы</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="qosu">Qosu</string>
+    <string name="bastau">Bastau</string>
+    <string name="tastau">Tastau</string>
+    <string name="negizgi">Negızgı</string>
+
+    <string name="juru">Jüru</string>
+    <string name="jugiru">Jügıru</string>
+    <string name="velosiped">Velosiped</string>
+    <string name="ioga">İoga</string>
+    <string name="futbol">Futbol</string>
+    <string name="juzu">Jüzu</string>
+
+    <string name="call_with_family">Otbasymen söilesu</string>
+    <string name="save_money">Aqşa saqtau</string>
+    <string name="call_with_friends">Dostarğa habarlasu</string>
+    <string name="listen_podcast">Podkast tyñdau</string>
+
+    <string name="temeki_tastau">Temekı tastau</string>
+    <string name="alkagol">Alkagöl ışpeu</string>
+    <string name="kop_uiqtamau">Köp ūiyqtamau</string>
+    <string name="qant">Qant qabyldamau</string>
+    <string name="ashulanbau">Aşulanbau</string>
+    <string name="doreki_soilemeu">Dörekı söilemeu</string>
+    <string name="aqsha_joiu">Aqşa joiu</string>
+    <string name="youtube_kormeu">Youtube körmeu</string>
+    <string name="galamtorda_otyrmau">Ğalamtorda otyrmau</string>
+    <string name="azart_oiyan">Azart oiyn</string>
+    <string name="oryndaluda">Oryndaluda</string>
+    <string name="aiaqtaldy">Aiaqtaldy</string>
+    <string name="orynda">Orynda</string>
+    <string name="habarlandyrular">Habarlandyrular</string>
+    <string name="qoldau">Qoldau</string>
+    <string name="qarangy_nysqa">Qarañğy nūsqa</string>
+    <string name="til_auystyru">Tıl auystyru</string>
+    <string name="tandanyz">Tañdañyz</string>
+    <string name="aiyna">Aiyna</string>
+    <string name="percent">%</string>
+    <string name="menin">Menıñ</string>
+    <string name="adetterim">ädetterım</string>
+    <string name="oryndaldy">oryndaldy</string>
+    <string name="aralyqty_tandanyz">Aralyqty tañdañyz</string>
 
 </resources>

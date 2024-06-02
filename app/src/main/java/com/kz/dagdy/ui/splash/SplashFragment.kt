@@ -41,6 +41,17 @@ class SplashFragment : BaseFragment() {
             viewLifecycleOwner,
             Observer {
                 it.getContentIfNotHandled()?.let {
+                    val intent = AuthorizedActivity.getIntent(context)
+                    startActivity(intent)
+                    activity?.finish()
+                }
+            }
+        )
+
+        viewModel.openUnAuth.observe(
+            viewLifecycleOwner,
+            Observer {
+                it.getContentIfNotHandled()?.let {
                     val intent = UnauthorizedActivity.getIntent(context)
                     startActivity(intent)
                     activity?.finish()

@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
         <import type="com.kz.dagdy.ui.baptau.BaptauViewModel" />
@@ -10,16 +12,191 @@
 
     </data>
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:background="@color/white"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:paddingTop="@dimen/dp_20">
 
         <TextView
-            android:layout_width="match_parent"
+            android:id="@+id/tv_settings"
+            style="@style/Font.Bold.CrimsonPro"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Baptau"/>
-    </RelativeLayout>
+            android:layout_marginStart="@dimen/dp_22"
+            android:layout_marginTop="@dimen/dp_40"
+            android:text="@string/baptau"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_34"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/iv_notification"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_50"
+            android:background="@drawable/bg_icon_baptau"
+            android:src="@drawable/ic_notification"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_settings" />
+
+        <TextView
+            android:id="@+id/tv_habarlandyru"
+            android:layout_width="wrap_content"
+            style="@style/Font.Medium.CrimsonPro"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_16"
+            android:text="@string/habarlandyrular"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_22"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_notification"
+            app:layout_constraintStart_toEndOf="@+id/iv_notification"
+            app:layout_constraintTop_toTopOf="@+id/iv_notification" />
+
+        <Switch
+            android:id="@+id/switch_notification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_16"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_habarlandyru"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_habarlandyru" />
+
+        <View
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="@dimen/dp_1"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_27"
+            android:background="@color/background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_habarlandyru" />
+
+        <ImageButton
+            android:id="@+id/iv_dark_version"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_29"
+            android:background="@drawable/bg_icon_baptau"
+            android:src="@drawable/ic_dark_version"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_notification" />
+
+        <TextView
+            android:id="@+id/tv_qarangy_nysqa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Font.Medium.CrimsonPro"
+            android:layout_marginStart="@dimen/dp_16"
+            android:text="@string/qarangy_nysqa"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_22"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_dark_version"
+            app:layout_constraintStart_toEndOf="@+id/iv_dark_version"
+            app:layout_constraintTop_toTopOf="@+id/iv_dark_version" />
+
+        <Switch
+            android:id="@+id/switch_dark_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_16"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_qarangy_nysqa"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_qarangy_nysqa"
+            />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="@dimen/dp_1"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_27"
+            android:background="@color/background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_qarangy_nysqa" />
+
+
+        <ImageButton
+            android:id="@+id/iv_language"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_29"
+            android:background="@drawable/bg_icon_baptau"
+            android:src="@drawable/ic_language"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_dark_version" />
+
+        <TextView
+            android:id="@+id/tv_language"
+            android:layout_width="wrap_content"
+            style="@style/Font.Medium.CrimsonPro"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_16"
+            android:text="@string/til_auystyru"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_22"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_language"
+            app:layout_constraintStart_toEndOf="@+id/iv_language"
+            app:layout_constraintTop_toTopOf="@+id/iv_language" />
+
+        <View
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="@dimen/dp_1"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_27"
+            android:background="@color/background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_language" />
+
+        <View
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="@dimen/dp_1"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_27"
+            android:background="@color/background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_language" />
+
+        <ImageButton
+            android:id="@+id/iv_chat"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_29"
+            android:background="@drawable/bg_icon_baptau"
+            android:src="@drawable/ic_chat"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_language" />
+
+        <TextView
+            android:id="@+id/tv_chat"
+            android:layout_width="wrap_content"
+            style="@style/Font.Medium.CrimsonPro"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_16"
+            android:text="@string/qoldau"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_22"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_chat"
+            app:layout_constraintStart_toEndOf="@+id/iv_chat"
+            app:layout_constraintTop_toTopOf="@+id/iv_chat" />
+
+        <View
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="@dimen/dp_1"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_27"
+            android:background="@color/background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_chat" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

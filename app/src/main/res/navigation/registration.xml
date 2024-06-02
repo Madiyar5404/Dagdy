@@ -11,4 +11,6 @@
         android:label="RegistrationFragment"
         tools:layout="@layout/fragment_registration"
         />
+
+    <include app:graph="@navigation/login"/>
 </navigation>

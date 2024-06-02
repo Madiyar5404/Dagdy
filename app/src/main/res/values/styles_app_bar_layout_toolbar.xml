@@ -12,8 +12,19 @@
     <style name="ToolbarStyle">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="theme">@style/ThemeOverlay.MaterialComponents.Dark</item>
-        <item name="popupTheme">@style/ThemeOverlay.MaterialComponents.Light</item>
+        <item name="android:textSize">@dimen/sp_25</item>
+        <item name="android:gravity">center</item>
+        <item name="fontFamily">@font/crimson_pro_semi_bold</item>
+        <item name="android:textColor">@color/authorizedBlackTextColor</item>
+    </style>
+
+    <style name="AppBarTextViewStyle" parent="Font.SemiBold.CrimsonPro">
+        <item name="android:layout_width">@dimen/dp_0</item>
+        <item name="android:layout_height">@dimen/dp_0</item>
+        <item name="android:textSize">@dimen/sp_25</item>
+        <item name="android:gravity">center</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:textColor">@color/authorizedBlackTextColor</item>
     </style>
 
 </resources>

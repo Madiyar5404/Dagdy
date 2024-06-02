@@ -18,6 +18,18 @@
         <item name="fontFamily">@font/roboto_bold</item>
     </style>
 
+    <style name="Font.SemiBold"></style>
+
+    <style name="Font.SemiBold.CrimsonPro">
+        <item name="android:fontFamily">@font/crimson_pro_semi_bold</item>
+        <item name="fontFamily">@font/crimson_pro_semi_bold</item>
+    </style>
+
+    <style name="Font.Bold.CrimsonPro">
+        <item name="android:fontFamily">@font/crimson_pro_bold</item>
+        <item name="fontFamily">@font/crimson_pro_bold</item>
+    </style>
+
     <style name="Font.Bold.Italic">
         <item name="android:fontFamily">@font/roboto_bold_italic</item>
         <item name="fontFamily">@font/roboto_bold_italic</item>
@@ -43,6 +55,11 @@
         <item name="fontFamily">@font/roboto_medium</item>
     </style>
 
+    <style name="Font.Medium.CrimsonPro">
+        <item name="android:fontFamily">@font/crimson_pro_medium</item>
+        <item name="fontFamily">@font/crimson_pro_medium</item>
+    </style>
+
     <style name="Font.Medium.Italic">
         <item name="android:fontFamily">@font/roboto_medium_italic</item>
         <item name="fontFamily">@font/roboto_medium_italic</item>
@@ -62,5 +79,6 @@
         <item name="android:fontFamily">@font/roboto_thin_italic</item>
         <item name="fontFamily">@font/roboto_thin_italic</item>
     </style>
+
 
 </resources>

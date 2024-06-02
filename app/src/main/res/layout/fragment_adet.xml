@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <import type="com.kz.dagdy.ui.adet.AdetViewModel" />
 
         <variable
@@ -10,17 +13,273 @@
 
     </data>
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:background="@color/white"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/mainBg">
 
-        <TextView
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Adet"/>
+            android:layout_height="@dimen/dp_0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-    </RelativeLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="@color/borderColor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_menin_adetterim"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cl_date">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/mcv"
+                        android:layout_width="@dimen/dp_100"
+                        android:layout_height="@dimen/dp_100"
+                        android:layout_marginStart="@dimen/dp_24"
+                        android:layout_marginTop="@dimen/dp_16"
+                        android:backgroundTint="@color/black"
+                        app:cardCornerRadius="@dimen/dp_50"
+                        app:cardElevation="@dimen/dp_0"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:strokeColor="@color/percent_adet"
+                        app:strokeWidth="@dimen/dp_5">
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:id="@+id/tv_percent_adet"
+                        style="@style/Font.SemiBold.CrimsonPro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dp_24"
+                        android:text="70"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_34"
+                        app:layout_constraintBottom_toBottomOf="@+id/mcv"
+                        app:layout_constraintEnd_toEndOf="@+id/mcv"
+                        app:layout_constraintStart_toStartOf="@+id/mcv"
+                        app:layout_constraintTop_toTopOf="@+id/mcv"
+                        tools:text="70" />
+
+                    <TextView
+                        style="@style/Font.SemiBold.CrimsonPro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/percent"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_34"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_percent_adet"
+                        app:layout_constraintStart_toEndOf="@+id/tv_percent_adet"
+                        app:layout_constraintTop_toTopOf="@+id/tv_percent_adet" />
+
+                    <TextView
+                        android:id="@+id/tv_menin"
+                        style="@style/Font.Medium.CrimsonPro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_38"
+                        android:text="@string/menin"
+                        android:textColor="@color/authorizedBlackTextColor"
+                        android:textSize="@dimen/sp_30"
+                        app:layout_constraintStart_toEndOf="@+id/mcv"
+                        app:layout_constraintTop_toTopOf="@+id/mcv" />
+
+                    <TextView
+                        android:id="@+id/tv_adetterim"
+                        style="@style/Font.Medium.CrimsonPro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/adetterim"
+                        android:textColor="@color/authorizedBlackTextColor"
+                        android:textSize="@dimen/sp_22"
+                        app:layout_constraintStart_toStartOf="@+id/tv_menin"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_menin" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintStart_toStartOf="@+id/tv_adetterim"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_adetterim">
+
+                        <TextView
+                            style="@style/Font.Medium.CrimsonPro"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="("
+                            android:textSize="@dimen/sp_14" />
+
+                        <TextView
+                            android:id="@+id/tv_count_overall"
+                            style="@style/Font.Medium.CrimsonPro"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="6"
+                            android:textSize="@dimen/sp_14" />
+
+                        <TextView
+                            style="@style/Font.Medium.CrimsonPro"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="/"
+                            android:textSize="@dimen/sp_14" />
+
+                        <TextView
+                            android:id="@+id/tv_count_done"
+                            style="@style/Font.Medium.CrimsonPro"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="6"
+                            android:textSize="@dimen/sp_14" />
+
+                        <TextView
+                            style="@style/Font.Medium.CrimsonPro"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=")"
+                            android:textSize="@dimen/sp_14" />
+
+                        <TextView
+                            style="@style/Font.Medium.CrimsonPro"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_4"
+                            android:text="@string/oryndaldy"
+                            android:textSize="@dimen/sp_14" />
+
+                    </LinearLayout>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/mcv_date"
+                        android:layout_width="90dp"
+                        android:layout_height="@dimen/dp_50"
+                        android:layout_marginEnd="@dimen/dp_30"
+                        android:backgroundTint="@color/white"
+                        app:cardCornerRadius="@dimen/dp_30"
+                        app:cardElevation="@dimen/dp_0"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:strokeColor="@color/borderColor"
+                        app:strokeWidth="@dimen/dp_2">
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <ImageView
+                        android:id="@+id/iv_calendar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_14"
+                        android:src="@drawable/ic_menu_board"
+                        app:layout_constraintBottom_toBottomOf="@+id/mcv_date"
+                        app:layout_constraintStart_toStartOf="@+id/mcv_date"
+                        app:layout_constraintTop_toTopOf="@+id/mcv_date" />
+
+                    <TextView
+                        style="@style/Font.Bold.CrimsonPro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dp_4"
+                        android:text="Nau"
+                        android:textColor="@color/authorizedTrueTextColor"
+                        android:textSize="@dimen/sp_19"
+                        app:layout_constraintBottom_toBottomOf="@+id/iv_calendar"
+                        app:layout_constraintEnd_toEndOf="@+id/mcv_date"
+                        app:layout_constraintStart_toEndOf="@+id/iv_calendar"
+                        app:layout_constraintTop_toTopOf="@+id/iv_calendar" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <FrameLayout
+                android:id="@+id/bottomFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom"
+                app:behavior_hideable="false"
+                app:behavior_peekHeight="530dp"
+                app:layout_behavior="@string/bottom_sheet_behavior">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:background="@drawable/top_corner_radius"
+                    android:elevation="@dimen/dp_12">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/mcv_line"
+                        android:layout_width="@dimen/dp_40"
+                        android:layout_height="@dimen/dp_4"
+                        android:layout_marginTop="@dimen/dp_8"
+                        android:elevation="@dimen/dp_0"
+                        app:cardBackgroundColor="#E2E5E9"
+                        app:cardCornerRadius="@dimen/dp_100"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cl_type_adet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/dp_16"
+                        android:layout_marginTop="@dimen/dp_16"
+                        android:background="@drawable/bg_tab_layout"
+                        android:padding="@dimen/dp_2"
+                        app:layout_constraintTop_toBottomOf="@+id/mcv_line">
+
+                        <com.google.android.material.tabs.TabLayout
+                            android:id="@+id/tab_layout"
+                            style="@style/TabLayoutStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <com.google.android.material.tabs.TabItem
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bg_tab_selector"
+                                android:text="@string/orynda" />
+
+                            <com.google.android.material.tabs.TabItem
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bg_tab_selector"
+                                android:text="@string/barlygy" />
+
+                            <com.google.android.material.tabs.TabItem
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bg_tab_selector"
+                                android:text="@string/aiaqtaldy" />
+                        </com.google.android.material.tabs.TabLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </FrameLayout>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

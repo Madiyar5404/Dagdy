@@ -5,16 +5,17 @@
     <item
         android:id="@+id/navigation_qarjy"
         android:enabled="true"
-        android:icon="@drawable/ic_adet"
-        android:title="@string/adet"
+        android:icon="@drawable/ic_qarjy"
+        android:title="@string/qarjy"
         app:showAsAction="always" />
 
     <item
         android:id="@+id/navigation_adet"
         android:enabled="true"
-        android:icon="@drawable/ic_qarjy"
-        android:title="@string/qarjy"
+        android:icon="@drawable/ic_adet"
+        android:title="@string/adet"
         app:showAsAction="always" />
+
 
     <item
         android:id="@+id/navigation_plus"

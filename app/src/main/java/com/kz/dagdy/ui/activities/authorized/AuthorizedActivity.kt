@@ -3,8 +3,10 @@ package com.kz.dagdy.ui.activities.authorized
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.util.AttributeSet
 import android.view.View
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.Observer
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
@@ -15,6 +17,7 @@ import com.kz.dagdy.ui_common.base.BaseActivity
 class AuthorizedActivity : BaseActivity() {
 
     private lateinit var binding: ActivityAuthorizedBinding
+    private lateinit var viewModel: AuthorizedViewModel
     private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,6 +26,7 @@ class AuthorizedActivity : BaseActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_authorized)
         binding.lifecycleOwner = this
 
+        initAndObserveView()
         initView()
     }
 
@@ -68,8 +72,24 @@ class AuthorizedActivity : BaseActivity() {
 
                 else -> false
             }
-
         }
+    }
+
+    private fun initAndObserveView() {
+        viewModel = getViewModel(AuthorizedViewModel::class.java)
+        binding.viewModel = viewModel
+
+        binding.btnAdd.setOnClickListener {
+            viewModel.onQosuBtnClick()
+        }
+
+//        viewModel.apply {
+//            openQosu.observe(this@AuthorizedActivity, Observer {
+//                it.getContentIfNotHandled()?.let {
+
+//                }
+//            })
+//        }
     }
 
     companion object {
