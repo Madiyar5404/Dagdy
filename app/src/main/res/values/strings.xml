@@ -72,5 +72,19 @@
     <string name="adetterim">ädetterım</string>
     <string name="oryndaldy">oryndaldy</string>
     <string name="aralyqty_tandanyz">Aralyqty tañdañyz</string>
+    <string name="kuni">Künı</string>
+    <string name="kyndi_tandanyz">Kündı tañdañyz</string>
+    <string name="sumasy">Sumasy</string>
+    <string name="shygys_sumasy">Şyğys sumasy</string>
+    <string name="number_zero">0</string>
+    <string name="turi">Türı</string>
+    <string name="nalichnye">Nalichnye</string>
+    <string name="aty">Aty</string>
+    <string name="choose_date">Künın tañdañyz</string>
+    <string name="engizu">Engızu</string>
+    <string name="taqyryp_qosynyz">Taqyryp qosyñyz</string>
+    <string name="taqyryp_qosy">Taqyryp qosy</string>
+    <string name="engiziniz">Engızıñız</string>
+    <string name="tusin_tandanyz">Tüsın tañdañyz</string>
 
 </resources>

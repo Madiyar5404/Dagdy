@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.kz.dagdy.ui.calendar.single.CalendarSingleViewModel" />
+
+        <variable
+            name="viewModel"
+            type="com.kz.dagdy.ui.calendar.single.CalendarSingleViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/include_appbar_calendar"
+            layout="@layout/view_appbar"
+            app:callback="@{viewModel.appBarButtonsClickCallback}"
+            app:layout_constraintTop_toTopOf="parent"
+            app:title="@{viewModel.titleFieldText}" />
+
+        <com.kz.dagdy.ui.calendar.lib.CalendarVertical
+            android:id="@+id/calendar_view_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0"
+            android:background="@color/backgroundCalendar"
+            android:paddingStart="@dimen/dp_16"
+            android:paddingEnd="@dimen/dp_16"
+            app:layout_constraintBottom_toTopOf="@id/ll_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_days_week">
+
+        </com.kz.dagdy.ui.calendar.lib.CalendarVertical>
+
+        <LinearLayout
+            android:id="@+id/ll_days_week"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_34"
+            android:layout_marginHorizontal="@dimen/dp_16"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/include_appbar_calendar">
+
+            <TextView
+                android:id="@+id/tv_day_mon"
+                style="@style/Font.Bold.CrimsonPro"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginBottom="@dimen/dp_6"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Düi"
+                android:textColor="@color/colorTitleDayXiaomi"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_day_tue"
+                style="@style/Font.Bold.CrimsonPro"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginBottom="@dimen/dp_6"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Sei"
+                android:textColor="@color/colorTitleDayXiaomi"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_day_wed"
+                style="@style/Font.Bold.CrimsonPro"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginBottom="@dimen/dp_6"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Sär"
+                android:textColor="@color/colorTitleDayXiaomi"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_day_thu"
+                style="@style/Font.Bold.CrimsonPro"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginBottom="@dimen/dp_6"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Bei"
+                android:textColor="@color/colorTitleDayXiaomi"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_day_fri"
+                style="@style/Font.Bold.CrimsonPro"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginBottom="@dimen/dp_6"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Jūm"
+                android:textColor="@color/colorTitleDayXiaomi"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_day_sat"
+                style="@style/Font.Bold.CrimsonPro"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginBottom="@dimen/dp_6"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Sen"
+                android:textColor="@color/colorTitleDayXiaomi"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_day_sun"
+                style="@style/Font.Bold.CrimsonPro"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginBottom="@dimen/dp_6"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Jek"
+                android:textColor="@color/colorTitleDayXiaomi"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/dp_24"
+            android:paddingBottom="@dimen/dp_18"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_engizu"
+                style="@style/ButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/dp_16"
+                android:text="@string/engizu" />
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

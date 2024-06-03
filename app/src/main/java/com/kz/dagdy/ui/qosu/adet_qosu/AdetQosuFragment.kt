@@ -57,12 +57,12 @@ class AdetQosuFragment : BaseFragment() {
             override fun onTabSelected(tab: TabLayout.Tab) {
                 val selectedTabIndex = tab.position
                 viewModel.onTabSelected(selectedTabIndex)
-                if (selectedTabIndex == 2) {
-                    binding.clTastau.visibility = View.GONE
-                    binding.clBastau.visibility = View.VISIBLE
-                } else {
+                if (selectedTabIndex == 1) {
                     binding.clTastau.visibility = View.VISIBLE
                     binding.clBastau.visibility = View.GONE
+                } else {
+                    binding.clTastau.visibility = View.GONE
+                    binding.clBastau.visibility = View.VISIBLE
                 }
             }
 
@@ -95,9 +95,9 @@ class AdetQosuFragment : BaseFragment() {
         }
     }
 
-        companion object {
-            fun newInstance(): AdetQosuFragment {
-                return AdetQosuFragment()
-            }
+    companion object {
+        fun newInstance(): AdetQosuFragment {
+            return AdetQosuFragment()
         }
     }
+}

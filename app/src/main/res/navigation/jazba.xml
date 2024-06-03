@@ -10,5 +10,5 @@
         android:name="com.kz.dagdy.ui.jazba.JazbaFragment"
         android:label="JazbaFragment"
         tools:layout="@layout/fragment_jazba" />
-
+    <include app:graph="@navigation/qosu" />
 </navigation>

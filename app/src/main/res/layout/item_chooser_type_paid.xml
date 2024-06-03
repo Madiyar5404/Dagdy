@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.kz.dagdy.ui_common.callbacks.RecyclerViewItemClickCallback" />
+
+        <variable
+            name="recyclerViewItemClickCallback"
+            type="RecyclerViewItemClickCallback" />
+
+        <variable
+            name="data"
+            type="com.kz.dagdy.data.models.dialog.selection_type_transaction.Transaction" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_chooser_type_paid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:backgroundTint="@color/white"
+        android:onClick="@{() -> recyclerViewItemClickCallback.onRecyclerViewItemClick(data)}">
+
+        <ImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_8"
+            app:bindIcon="@{data.image}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_aiyna" />
+
+        <TextView
+            style="@style/Font.Medium.CrimsonPro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_16"
+            android:text="@{data.title}"
+            android:textColor="@color/authorizedBlackTextColor"
+            android:textSize="@dimen/sp_25"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_icon"
+            app:layout_constraintStart_toEndOf="@+id/iv_icon"
+            app:layout_constraintTop_toTopOf="@+id/iv_icon"
+            tools:text="@string/nalichnye" />
+
+        <ImageView
+            android:id="@+id/iv_selected_type_paid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/dp_16"
+            android:layout_marginEnd="@dimen/dp_8"
+            android:src="@drawable/ic_tick"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:visibleGone="@{data.selected}" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

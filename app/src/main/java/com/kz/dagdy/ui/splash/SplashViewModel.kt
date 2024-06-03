@@ -43,11 +43,11 @@ class SplashViewModel
     }
 
     private fun openNext() {
-        if (preferences.getAppToken().isNullOrEmpty()) {
+//        if (preferences.getAppToken().isNullOrEmpty()) {
+//            _openMain.postValue(Event(Unit))
+//        } else {
             _openMain.postValue(Event(Unit))
-        } else {
-            _openMain.postValue(Event(Unit))
-        }
+//        }
     }
 
     private val _openMain = MutableLiveData<Event<Unit>>()

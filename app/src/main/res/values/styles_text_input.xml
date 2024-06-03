@@ -19,9 +19,21 @@
         <item name="android:layout_width">@dimen/dp_0</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:theme">@style/TextInputLayoutTheme</item>
-
         <item name="boxBackgroundColor">@color/transparent</item>
         <item name="android:textColorHint">@color/black40</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/dp_12</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/dp_12</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/dp_12</item>
+        <item name="boxCornerRadiusTopStart">@dimen/dp_12</item>
+    </style>
+
+    <style name="TextInputLayoutStyle.OutlinedBox.Suma" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:layout_width">@dimen/dp_0</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:theme">@style/TextInputLayoutTheme</item>
+        <item name="boxBackgroundColor">@color/transparent</item>
+        <item name="boxStrokeColor">@color/borderColor</item>
+        <item name="android:textColorHint">@color/authorizedGreyTextColor</item>
         <item name="boxCornerRadiusBottomEnd">@dimen/dp_12</item>
         <item name="boxCornerRadiusBottomStart">@dimen/dp_12</item>
         <item name="boxCornerRadiusTopEnd">@dimen/dp_12</item>
@@ -47,6 +59,10 @@
 
     <style name="EditTextStyle.Email" parent="EditTextStyle">
         <item name="android:inputType">textEmailAddress</item>
+    </style>
+
+    <style name="EditTextStyle.Date" parent="EditTextStyle">
+        <item name="android:inputType">none</item>
     </style>
 
     <style name="EditTextStyle.Iin" parent="EditTextStyle">
@@ -102,10 +118,22 @@
         <item name="startIconTint">@null</item>
     </style>
 
+    <style name="TextInputLayoutStyle.OutlinedBox.Number" parent="TextInputLayoutStyle.OutlinedBox">
+        <item name="hintEnabled">true</item>
+        <item name="startIconDrawable">@drawable/ic_user</item>
+        <item name="startIconTint">@null</item>
+    </style>
+
     <style name="TextInputLayoutStyle.OutlinedBox.Email" parent="TextInputLayoutStyle.OutlinedBox">
         <item name="hintEnabled">true</item>
         <item name="startIconDrawable">@drawable/ic_email</item>
         <item name="startIconTint">@null</item>
+    </style>
+
+    <style name="TextInputLayoutStyle.OutlinedBox.Date" parent="TextInputLayoutStyle.OutlinedBox">
+        <item name="startIconDrawable">@drawable/ic_arrow_up</item>
+        <item name="endIconDrawable">@drawable/ic_arrow_up</item>
+        <item name="endIconTint">@null</item>
     </style>
 
     <style name="TextInputLayoutStyle.OutlinedBox.Password" parent="TextInputLayoutStyle.OutlinedBox">

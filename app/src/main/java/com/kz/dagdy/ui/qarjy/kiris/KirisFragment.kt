@@ -42,20 +42,20 @@ class KirisFragment : BaseFragment() {
     }
 
     private fun initAndObserveViewModel() {
-//        setBottomSheetDialog()
+        setBottomSheetDialog()
     }
 
-//    private fun setBottomSheetDialog() {
-//        bottomSheetBehavior = BottomSheetBehavior.from(binding.bottomFragment)
-//        bottomSheetBehavior.setBottomSheetCallback(object :
-//            BottomSheetBehavior.BottomSheetCallback() {
-//            override fun onStateChanged(@NonNull bottomSheet: View, newState: Int) {
-//
-//            }
-//
-//            override fun onSlide(@NonNull bottomSheet: View, slideOffset: Float) {
-//                //do nothing
-//            }
-//        })
-//    }
+    private fun setBottomSheetDialog() {
+        bottomSheetBehavior = BottomSheetBehavior.from(binding.bottomFragment)
+        bottomSheetBehavior.setBottomSheetCallback(object :
+            BottomSheetBehavior.BottomSheetCallback() {
+            override fun onStateChanged(@NonNull bottomSheet: View, newState: Int) {
+
+            }
+
+            override fun onSlide(@NonNull bottomSheet: View, slideOffset: Float) {
+                //do nothing
+            }
+        })
+    }
 }

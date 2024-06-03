@@ -208,7 +208,7 @@ constructor(
     private var issueType: Int = 1
 
     fun onTabSelected(index: Int) {
-        issueType = index + 1
+        issueType = index + 0
     }
 
 }

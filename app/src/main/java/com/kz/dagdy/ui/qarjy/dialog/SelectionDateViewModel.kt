@@ -5,6 +5,7 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.kz.dagdy.data.models.dialog.selection_sorted_date.SelectionDate
+import com.kz.dagdy.data.models.dialog.selection_type_transaction.Transaction
 import com.kz.dagdy.ui_common.callbacks.RecyclerViewItemClickCallback
 import com.kz.dagdy.utils.live_data.Event
 import javax.inject.Inject
@@ -53,6 +54,11 @@ constructor(
         listOrganization.forEach {
             if (it is SelectionDate) {
                 if (it.selected) {
+                    _selectedDate.postValue(it)
+                }
+            }
+            if (it is Transaction){
+                if(it.selected){
                     _selectedDate.postValue(it)
                 }
             }

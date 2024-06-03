@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/backgroundCalendar"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/backgroundCalendar"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/dp_16">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_34"
+            android:layout_marginTop="@dimen/dp_4"
+            android:gravity="start">
+
+            <TextView
+                android:id="@+id/tv_title_month"
+                style="@style/Font.Medium.CrimsonPro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginBottom="@dimen/dp_6"
+                android:textColor="@color/colorTextHeaderTitle"
+                android:textSize="@dimen/sp_16" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_34"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_day_mon"
+                style="@style/Font.Bold.CrimsonPro"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginBottom="@dimen/dp_6"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Düi"
+                android:textColor="@color/colorTextHeader" />
+
+            <TextView
+                android:id="@+id/tv_day_tue"
+                style="@style/Font.Bold.CrimsonPro"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginBottom="@dimen/dp_6"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Sei"
+                android:textColor="@color/colorTextHeader" />
+
+            <TextView
+                android:id="@+id/tv_day_wed"
+                style="@style/Font.Bold.CrimsonPro"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginBottom="@dimen/dp_6"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Sär"
+                android:textColor="@color/colorTextHeader" />
+
+            <TextView
+                android:id="@+id/tv_day_thu"
+                style="@style/Font.Bold.CrimsonPro"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginBottom="@dimen/dp_6"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Bei"
+                android:textColor="@color/colorTextHeader" />
+
+            <TextView
+                android:id="@+id/tv_day_fri"
+                style="@style/Font.Bold.CrimsonPro"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginBottom="@dimen/dp_6"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Jūm"
+                android:textColor="@color/colorTextHeader" />
+
+            <TextView
+                android:id="@+id/tv_day_sat"
+                style="@style/Font.Bold.CrimsonPro"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginBottom="@dimen/dp_6"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Sen"
+                android:textColor="@color/colorTextHeader" />
+
+            <TextView
+                android:id="@+id/tv_day_sun"
+                style="@style/Font.Bold.CrimsonPro"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginBottom="@dimen/dp_6"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Jek"
+                android:textColor="@color/colorTextHeader" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

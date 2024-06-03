@@ -20,7 +20,10 @@
 
         <include
             android:id="@+id/include_appbar"
-            layout="@layout/view_appbar" />
+            layout="@layout/view_appbar"
+            app:callback="@{viewModel.appBarButtonsClickCallback}"
+            app:layout_constraintTop_toTopOf="parent"
+            app:title="@{viewModel.titleFieldText}" />
 
         <FrameLayout
             android:id="@+id/frameLayout"

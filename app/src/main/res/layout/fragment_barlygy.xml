@@ -30,7 +30,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <com.kz.dagdy.ui.custom_view.piechart.customView.PieChart
+                <com.kz.dagdy.ui.custom_view.piechart.custom_view.PieChart
                     android:id="@+id/analyticalPieChart_1"
                     android:layout_width="match_parent"
                     android:layout_height="350dp"

@@ -1,4 +1,4 @@
-package com.kz.dagdy.ui.custom_view.piechart.customView
+package com.kz.dagdy.ui.custom_view.piechart.custom_view
 
 import android.animation.ValueAnimator
 import android.content.Context

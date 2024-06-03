@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import com.kz.dagdy.R
 import com.kz.dagdy.databinding.FragmentQosuBinding
 import com.kz.dagdy.ui.qarjy.ViewPagerAdapter
@@ -25,9 +27,7 @@ class QosuFragment : BaseFragment() {
     )
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_qosu, container, false)
         binding.lifecycleOwner = viewLifecycleOwner
@@ -41,12 +41,8 @@ class QosuFragment : BaseFragment() {
         binding.viewModel = viewModel
 
         var pagerAdapter = ViewPagerAdapter(
-            childFragmentManager,
-            items = items,
-            titles = arrayListOf(
-                getString(R.string.qarjy),
-                getString(R.string.adet),
-                getString(R.string.jazba)
+            childFragmentManager, items = items, titles = arrayListOf(
+                getString(R.string.qarjy), getString(R.string.adet), getString(R.string.jazba)
             )
         )
 
@@ -54,6 +50,16 @@ class QosuFragment : BaseFragment() {
         binding.viewPager.adapter = pagerAdapter
         binding.tabLayout.setupWithViewPager(binding.viewPager, true)
 
+        initAndObserveViewModel()
     }
 
+    private fun initAndObserveViewModel() {
+        viewModel.apply {
+            popBackStack.observe(viewLifecycleOwner, Observer {
+                it.getContentIfNotHandled()?.let {
+                    findNavController().popBackStack()
+                }
+            })
+        }
+    }
 }

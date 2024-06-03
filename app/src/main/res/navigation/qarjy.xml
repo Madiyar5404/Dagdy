@@ -9,7 +9,7 @@
         android:id="@+id/qarjyFragment"
         android:name="com.kz.dagdy.ui.qarjy.QarjyFragment"
         android:label="QarjyFragment"
-        tools:layout="@layout/fragment_qarjy">
+        tools:layout="@layout/fragment_qarjy"/>
 
-    </fragment>
+    <include app:graph="@navigation/qosu" />
 </navigation>

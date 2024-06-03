@@ -38,39 +38,33 @@ class AuthorizedActivity : BaseActivity() {
                 R.id.adetFragment,
                 R.id.qarjyFragment,
                 R.id.jazbaFragment,
-                R.id.baptauFragment
-                -> {
-                    binding.viewBottomNavigation.visibility = View.VISIBLE
+                R.id.baptauFragment -> {
+                    binding.clBottomNavigation.visibility = View.VISIBLE
+                    binding.btnAdd.visibility = View.VISIBLE
                 }
 
                 else -> {
-                    binding.viewBottomNavigation.visibility = View.GONE
+                    binding.clBottomNavigation.visibility = View.GONE
+                    binding.btnAdd.visibility = View.GONE
                 }
             }
         }
-        binding.viewBottomNavigation.setOnNavigationItemSelectedListener { item ->
-            when (item.itemId) {
-                R.id.navigation_qarjy -> {
-                    navController.navigate(R.id.navigation_qarjy)
-                    true
+
+        binding.btnAdd.setOnClickListener {
+            when (navController.currentDestination?.id) {
+                R.id.qarjyFragment -> {
+                    navController.navigate(R.id.navigation_qosu)
                 }
 
-                R.id.navigation_adet -> {
-                    navController.navigate(R.id.navigation_adet)
-                    true
+                R.id.adetFragment -> {
+                    navController.navigate(R.id.navigation_qosu)
                 }
 
-                R.id.navigation_jazba -> {
-                    navController.navigate(R.id.navigation_jazba)
-                    true
+                R.id.jazbaFragment -> {
+                    navController.navigate(R.id.navigation_qosu)
                 }
 
-                R.id.navigation_baptau -> {
-                    navController.navigate(R.id.navigation_baptau)
-                    true
-                }
-
-                else -> false
+                R.id.baptauFragment -> {}
             }
         }
     }
@@ -78,18 +72,6 @@ class AuthorizedActivity : BaseActivity() {
     private fun initAndObserveView() {
         viewModel = getViewModel(AuthorizedViewModel::class.java)
         binding.viewModel = viewModel
-
-        binding.btnAdd.setOnClickListener {
-            viewModel.onQosuBtnClick()
-        }
-
-//        viewModel.apply {
-//            openQosu.observe(this@AuthorizedActivity, Observer {
-//                it.getContentIfNotHandled()?.let {
-
-//                }
-//            })
-//        }
     }
 
     companion object {

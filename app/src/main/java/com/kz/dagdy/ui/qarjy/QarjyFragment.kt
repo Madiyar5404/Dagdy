@@ -76,7 +76,7 @@ class QarjyFragment : BaseFragment() {
 
     private fun openSelectionDialog(list: List<SelectionDate>, callback: (Any) -> Unit) {
         val selectionDialog = SelectionDateDialog.newInstance(list, callback)
-        selectionDialog.show(requireActivity().supportFragmentManager, "SelectionOrderDialog")
+        selectionDialog.show(requireActivity().supportFragmentManager, "SelectionDateDialog")
     }
 
 }

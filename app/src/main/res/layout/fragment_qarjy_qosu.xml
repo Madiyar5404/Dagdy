@@ -23,8 +23,8 @@
             android:id="@+id/frameLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp_16"
             android:layout_marginHorizontal="@dimen/dp_48"
+            android:layout_marginTop="@dimen/dp_16"
             android:background="@drawable/bg_tab_layout"
             android:padding="@dimen/dp_2"
             app:layout_constraintTop_toTopOf="parent"
@@ -51,6 +51,261 @@
 
         </FrameLayout>
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0"
+            android:padding="@dimen/dp_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/frameLayout">
 
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/kuni"
+                android:textColor="@color/authorizedGreyTextColor"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/mcv_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:background="?attr/selectableItemBackground"
+                app:cardCornerRadius="@dimen/dp_12"
+                app:cardElevation="@dimen/dp_0"
+                app:layout_constraintStart_toStartOf="@+id/tv_date"
+                app:layout_constraintTop_toBottomOf="@+id/tv_date"
+                app:strokeColor="@color/authorizedGreyTextColor"
+                app:strokeWidth="@dimen/dp_1">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/dp_16"
+                    android:paddingVertical="@dimen/dp_12">
+
+                    <TextView
+                        android:id="@+id/tv_kuni"
+                        style="@style/TabTextAppearance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/kyndi_tandanyz"
+                        android:textColor="@color/authorizedTrueTextColor"
+                        android:textSize="@dimen/dp_16"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_6"
+                        android:src="@drawable/ic_arrow_up"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_kuni"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/tv_kuni" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/tv_sumasy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16"
+                android:text="@string/sumasy"
+                android:textColor="@color/authorizedGreyTextColor"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintStart_toStartOf="@+id/mcv_date"
+                app:layout_constraintTop_toBottomOf="@+id/mcv_date" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_suma"
+                style="@style/TextInputLayoutStyle.OutlinedBox.Suma"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/dp_8"
+                app:hintEnabled="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tv_sumasy"
+                app:layout_constraintTop_toBottomOf="@+id/tv_sumasy">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_suma"
+                    style="@style/EditTextStyle.Amount"
+                    android:hint="@string/number_zero"
+                    android:imeOptions="actionDone"
+                    android:paddingStart="@dimen/dp_16" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tv_turi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16"
+                android:text="@string/turi"
+                android:textColor="@color/authorizedGreyTextColor"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintStart_toStartOf="@+id/til_suma"
+                app:layout_constraintTop_toBottomOf="@+id/til_suma" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/mcv_turi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:background="?attr/selectableItemBackground"
+                app:cardCornerRadius="@dimen/dp_12"
+                app:cardElevation="@dimen/dp_0"
+                app:layout_constraintStart_toStartOf="@+id/tv_turi"
+                app:layout_constraintTop_toBottomOf="@+id/tv_turi"
+                app:strokeColor="@color/authorizedGreyTextColor"
+                app:strokeWidth="@dimen/dp_1">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/dp_16"
+                    android:paddingVertical="@dimen/dp_12">
+
+                    <TextView
+                        android:id="@+id/tv_type"
+                        style="@style/TabTextAppearance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/nalichnye"
+                        android:textColor="@color/authorizedTrueTextColor"
+                        android:textSize="@dimen/dp_16"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_6"
+                        android:src="@drawable/ic_arrow_up"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_type"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/tv_type" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/tv_aty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16"
+                android:text="@string/aty"
+                android:textColor="@color/authorizedGreyTextColor"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintStart_toStartOf="@+id/mcv_turi"
+                app:layout_constraintTop_toBottomOf="@+id/mcv_turi" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/mcv_aty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:background="?attr/selectableItemBackground"
+                app:cardCornerRadius="@dimen/dp_12"
+                app:cardElevation="@dimen/dp_0"
+                app:layout_constraintStart_toStartOf="@+id/tv_aty"
+                app:layout_constraintTop_toBottomOf="@+id/tv_aty"
+                app:strokeColor="@color/authorizedGreyTextColor"
+                app:strokeWidth="@dimen/dp_1">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/dp_16"
+                    android:paddingVertical="@dimen/dp_12">
+
+                    <TextView
+                        android:id="@+id/tv_title"
+                        style="@style/TabTextAppearance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tandanyz"
+                        android:textColor="@color/authorizedTrueTextColor"
+                        android:textSize="@dimen/dp_16"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_6"
+                        android:src="@drawable/ic_arrow_up"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_title"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/tv_title" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <TextView
+                android:id="@+id/tv_qosu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16"
+                android:text="@string/qosu"
+                android:textColor="@color/authorizedGreyTextColor"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintStart_toStartOf="@+id/mcv_aty"
+                app:layout_constraintTop_toBottomOf="@+id/mcv_aty" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/mcv_qosu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:background="?attr/selectableItemBackground"
+                app:cardCornerRadius="@dimen/dp_12"
+                app:cardElevation="@dimen/dp_0"
+                app:layout_constraintStart_toStartOf="@+id/tv_qosu"
+                app:layout_constraintTop_toBottomOf="@+id/tv_qosu"
+                app:strokeColor="@color/authorizedGreyTextColor"
+                app:strokeWidth="@dimen/dp_1">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/dp_16"
+                    android:paddingVertical="@dimen/dp_12">
+
+                    <TextView
+                        android:id="@+id/tv_title_qosu"
+                        style="@style/TabTextAppearance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/taqyryp_qosy"
+                        android:textColor="@color/authorizedGreyTextColor"
+                        android:textSize="@dimen/dp_16"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_6"
+                        android:src="@drawable/ic_arrow_up"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_title_qosu"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/tv_title_qosu" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

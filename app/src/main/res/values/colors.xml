@@ -117,6 +117,7 @@
     <color name="misty">#000000</color>
     <color name="item_adet">#F4F4F4</color>
     <color name="percent_adet">#6FD61F</color>
+    <color name="backgroundCalendar">#EBECF1</color>
 
 </resources>
 

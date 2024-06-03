@@ -11,4 +11,6 @@
         android:label="AdetFragment"
         tools:layout="@layout/fragment_adet" />
 
+    <include app:graph="@navigation/qosu" />
+
 </navigation>
